@@ -1,0 +1,1040 @@
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.container{
+    width: 100%;
+    padding: 0 10%;
+    margin: auto;
+}
+
+body{
+    font-family: "Exo", sans-serif;
+}
+/*Loader */
+/* HTML: <div class="loader"></div> */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(246, 240, 240, 0.96);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    border-radius: 50%;
+    background:
+            linear-gradient(0deg ,rgb(0 0 0/50%) 30%,#0000 0 70%,rgb(0 0 0/100%) 0) 50%/8% 100%,
+            linear-gradient(90deg,rgb(0 0 0/25%) 30%,#0000 0 70%,rgb(0 0 0/75% ) 0) 50%/100% 8%;
+    background-repeat: no-repeat;
+    animation: l23 1s infinite steps(12);
+}
+.loader::before,
+.loader::after {
+    content: "";
+    grid-area: 1/1;
+    border-radius: 50%;
+    background: inherit;
+    opacity: 0.915;
+    transform: rotate(30deg);
+}
+.loader::after {
+    opacity: 0.83;
+    transform: rotate(60deg);
+}
+@keyframes l23 {
+    100% {transform: rotate(1turn)}
+}
+/*-----------------Top-header*/
+.top-header{
+    background-color: greenyellow;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/*-------------------Header*/
+header {
+    position: fixed;
+    top: 58px;
+    background-color: #0A0A0B;
+    height: 80px;
+    width: 100%;
+    color: white;
+    z-index: 1000;
+}
+header .menu-icon{
+    display: none;
+}
+
+.active {
+    color: #4177DC !important;
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 600;
+    color: #fff;
+    background: #4177DC;
+    transition: all 0.1s;
+    font-size: 16px;
+    line-height: 22px;
+}
+.btn:hover{
+    background: rgba(65, 119, 220, 0.71);
+}
+.top-0 {
+    top: 0;
+}
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+}
+
+.logo {
+    width: 71px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: #0A0A0B;
+    color: white;
+    font-size: 16px;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.list .list-item {
+    margin-left: 48px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+.list .list-item a {
+    text-decoration: none;
+    color: white;
+    padding: 29px 5px;
+    border-bottom: 1px solid transparent;
+
+}
+.list .list-item a:hover{
+    border-bottom: 1px solid #fff;
+}
+.list .list-item a:hover {
+    color: #4177DC !important;
+}
+/*----------------Side-panel*/
+
+header .side-panel{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 120vh;
+    background-color: rgba(10, 10, 11, 0.98);
+    backdrop-filter: blur(10px);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    z-index: 999999;
+}
+header .side-panel img {
+    position: fixed;
+    top: 10px;
+    left:  10px;
+    width: 40px;
+}
+header .side-panel .side-panel-list{
+    list-style-type: none;
+}
+header .side-panel .side-panel-list li{
+    margin-bottom: 20px;
+    transition: all 0.2s;
+    padding-left:10px;
+}
+header .side-panel .side-panel-list li:hover{
+    border-left: 2px solid #fff;
+}
+header .side-panel .side-panel-list li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+}
+.none{
+    display: none !important;
+}
+header #select {
+    background: transparent;
+    color: #fff;
+    margin-left: 30px;
+    width: 70px;
+    border: none;
+    outline: none;
+
+}
+/*Modes*/
+#modes {
+    background-color: #0A0A0B;
+    color: #fff;
+    margin-left: 30px;
+    border: none;
+}
+/*----------------Intro section*/
+#intro {
+    background-color: #0A0A0B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 40px 0 42px;
+    margin-top: 80px;
+    height: calc(100vh - 80px);
+}
+#intro .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#intro .intro-title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+#intro .title-desc {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+    margin-bottom: 8px;
+}
+#intro .intro-car{
+    transition: all 0.2s;
+}
+#intro .start-btn {
+    width: 90px;
+}
+#intro .intro-car:hover {
+    transform: translateY(15px);
+}
+#intro .title-desc-desc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+#intro .title-desc-desc span {
+    color: #BABEC4;
+}
+#intro .cards  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 706px;
+}
+#intro .cards .card {
+    max-width: 89px;
+    margin: 41px 56px;
+    text-align: center;
+    transition: all 0.2s;
+}
+#intro .cards .card h2 {
+    margin: 16px 6px;
+}
+#intro .cards .card p{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #888B91;
+}
+#intro .start-btn{
+    transition: all 0.2s;
+}
+#intro .start-btn:hover {
+    transform: scale(0.9);
+}
+
+/*----------------About section*/
+#about{
+    background-color: #0A0A0B;
+    padding: 72px 0 88px;
+}
+#about .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+#about .wrapper .left-side {
+    max-width: 602px;
+    position: relative;
+    z-index: 1 !important;
+}
+#about .wrapper .left-side .about-img{
+    z-index: 1 !important;
+}
+#about .wrapper .left-side .extra-card {
+    width:197px;
+    height: 104px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    position: absolute;
+    top: 260px;
+    left: 283px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    color: #fff;
+}
+#about .wrapper .left-side .extra-card .extra-one{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-bottom: 10px;
+}
+#about .wrapper .left-side .extra-card .extra-two{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+#about .right-side {
+    max-width: 602px;
+    color: #fff;
+}
+#about .right-side .about-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+    margin-bottom: 24px;
+    color: #F1F2F3;
+}
+#about .right-side .about-desc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #BABEC4;
+    margin-bottom: 48px;
+}
+
+/*----------------Choose section*/
+#choose {
+    background-color: #0A0A0B;
+    color: #fff;
+    padding: 72px 0 48px;
+}
+#choose .choose-title {
+    max-width: 278px;
+    margin: 0 auto 64px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+}
+#choose #cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 870px;
+    margin: 0 auto;
+    overflow: scroll;
+}
+#choose #cards .card {
+    background: #111213;
+    border-radius: 20px;
+    padding: 32px 24px;
+    position: relative;
+    transition: all 0.1s;
+}
+#choose #cards .card:hover{
+    transform: translateY(-5px);
+}
+#choose #cards .card .car-brand {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+    margin-bottom: 10px;
+    color: #F1F2F3;
+
+}
+#choose #cards .card .car-model{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color:#BABEC4;
+    margin-bottom: 8px;
+}
+#choose #cards .card .car-img {
+    margin-bottom: 21px;
+    width: 100%;
+}
+#choose #cards .card .car-km {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 9px;
+}
+#choose #cards .card .car-km div{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+#choose #cards .card .car-type{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 31px;
+}
+#choose #cards .card .car-price {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #ffffff;
+}
+#choose #cards .card .bag-wrapper {
+    padding: 14px;
+    background-color: #4177DC;
+    width: 56px;
+    height: 48px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/*----------------Feature Section*/
+#feature {
+    padding: 72px 0 80px;
+    background-color: #0A0A0B;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+#feature .feature-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 164px;
+    color: #F1F2F3;
+    text-align: center;
+}
+#feature .car-on-map{
+    padding: 50px 0;
+    position: absolute;
+    top: 0;
+    left: 20%;
+}
+#feature .car-on-map .map{
+
+}
+#feature .car-on-map .car-map{
+    position: sticky;
+    right: 45%;
+}
+
+#feature .tran-cards{
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: 0 auto;
+    overflow: scroll;
+    color: #fff;
+    position: sticky;
+    left: 20%;
+    top: 20%;
+}
+#feature .tran-cards .left-card, #feature .right-one{
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    z-index: 100;
+    height: 100%;
+    border-radius: 20px;
+}
+#feature .tran-cards .left-two{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+    /*----------------Luxury Section*/
+#luxury {
+    background-color: #0A0A0B;
+    padding: 72px 0;
+}
+#luxury .luxury-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 64px;
+    color: #F1F2F3;
+    text-align: center;
+}
+#luxury .luxury-mini-cards{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 200px;
+    margin: 0 auto;
+    overflow: scroll;
+}
+#luxury .btn-mini-cards{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+#luxury .btn-mini-cards .mini-btn {
+    background-color: #4177DC;
+    width: 62px;
+    height: 52px;
+    border-radius: 16px;
+    border: none;
+    outline: none;
+    transition: all 0.1s;
+}
+#luxury .btn-mini-cards .mini-btn:hover{
+    transform: scale(1.1);
+}
+#luxury .btn-mini-cards .mini-logos{
+    padding: 10px;
+    background: #111213;
+    border-radius: 16px;
+    transition: all 0.1s;
+}
+#luxury .btn-mini-cards .mini-logos:hover{
+    transform: translateY(-5px);
+}
+
+#luxury #cards2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 80%;
+    margin: 72px auto ;
+    overflow: scroll;
+}
+#luxury #cards2 .card {
+    background: #111213;
+    border-radius: 20px;
+    padding: 32px 24px;
+    position: relative;
+    width: 30%;
+    height: 400px;
+    transition: all 0.1s ease-in-out;
+}
+#luxury #cards2 .card:hover{
+    transform: scale(1.01);
+}
+#luxury #cards2 .card .car-brand {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+    margin-bottom: 10px;
+    color: #F1F2F3;
+
+}
+#luxury #cards2 .card .car-model{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color:#BABEC4;
+    margin-bottom: 8px;
+}
+#luxury #cards2 .card .car-img {
+    margin-bottom: 21px;
+    width: 100%;
+}
+#luxury #cards2 .card .car-price {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #ffffff;
+}
+#luxury #cards2 .card .bag-wrapper {
+    padding: 14px;
+    background-color: #4177DC;
+    width: 56px;
+    height: 48px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.1s ease-in-out;
+}
+#luxury #cards2 .card .bag-wrapper:hover {
+    transform: scale(1.2);
+}
+
+/*Offer section*/
+#offer{
+    background-image: url('./images/subscribe-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 72px 56px;
+    min-height: 50vh;
+}
+#offer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#offer .wrapper .left{
+    width:40%;
+    display: inline-block;
+}
+#offer .wrapper img{
+    width:50%;
+}
+#offer .left .left-title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: #F1F2F3;
+}
+#offer .left .left-desc{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #BABEC4;
+    margin: 32px 0 48px;
+
+}
+/*Logos*/
+#logos {
+    background: #0A0A0B;
+    padding: 72px 0;
+}
+#logos  .wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 830px;
+}
+#logos img{
+    width: 50px;
+    transition: all 0.1s;
+}
+#logos img:hover{
+    transform: translateY(-5px);
+}
+
+/*Form section */
+#form {
+    background-color: #0A0A0B;
+    padding: 72px 0;
+    width: 100%;
+    min-height: 50vh;
+}
+#form .wrapper {
+    padding: 70px;
+    background-color: rgba(21, 15, 16, 0.68);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
+}
+#form .wrapper .form-title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 33px;
+    margin-bottom: 64px;
+    color: rgba(208, 211, 213, 0.89);
+    text-align: center;
+}
+#form .wrapper .form-desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(208, 211, 213, 0.89);
+    margin-bottom: 64px;
+    text-align: center;
+}
+
+#form .wrapper form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /*width: 100%;*/
+    gap: 20px;
+}
+#form .wrapper .form-btn {
+    background-color: transparent;
+    border: 2px solid #7a7777;
+    outline: none;
+    padding: 6px 10px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7a7777;
+    transition: all 0.1s ease-in-out;
+    width: 100%;
+    margin-top: 30px;
+}
+#form .wrapper .form-btn:hover {
+    background-color: #7a7777;
+    color: #fff;
+}
+#form .wrapper input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #7a7777;
+    outline: none;
+    padding: 10px 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    transition: all 0.1s ease-in-out;
+    color: #fff;
+}
+#form .wrapper form label {
+    position: relative;
+}
+#form .wrapper form label .show-eye{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#form .wrapper form label .show-eye{
+    transform: translateY(-5px);
+}
+/*Footer*/
+footer {
+    padding: 72px 32px;
+    background-color: #0A0A0B;
+}
+footer .wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto 30px;
+}
+footer .wrapper div{
+    width: 100%;
+    color: #fff;
+}
+footer .wrapper div h3{
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 24px;
+}
+footer .wrapper div ul {
+    list-style-type: none;
+}
+footer .wrapper .wrapper-first{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    margin-top: -40px;
+}
+footer .wrapper .wrapper-first img {
+    margin-bottom: 24px;
+}
+footer .wrapper .wrapper-first p {
+    max-width: 50%;
+    color: #fff;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+footer .wrapper div ul li {
+    margin-bottom: 12px;
+}
+footer .wrapper div ul li a {
+    text-decoration: none;
+    color: #BABEC4;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+footer .wrapper .wrapper-last{
+    margin-top: -100px;
+}
+footer .wrapper .wrapper-last ul{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.copyright{
+    color: #888B91;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------MEDIA QUERY--------------*/
+/*Media-query  for 1230px*/
+@media screen and (max-width: 1230px) {
+    /* ---------------Intro section */
+    #intro .title-desc-desc {
+        margin-bottom: 30px;
+    }
+    #intro .intro-car{
+        max-width: 280px;
+        margin-bottom: 0;
+    }
+    /* ----------------About section */
+    #about .left-side {
+        max-width: 500px;
+    }
+
+    #about .right-side {
+        max-width: 500px;
+    }
+}
+
+/*Media-query  for 992px*/
+@media screen and (max-width: 992px){
+    /*---------Intro section */
+    #intro .intro-title {
+        font-size: 26px;
+        line-height: 36px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+    #intro .title-desc {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+    #intro .title-desc-desc {
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+    #intro .intro-car{
+        width: 300px;
+        margin-bottom: 0;
+    }
+
+    #feature .car-on-map .map{
+        max-width: 400px;
+        margin: 0;
+    }
+    #feature .car-on-map .car-map{
+        max-width: 300px;
+        left: 37%;
+        top: 40%;
+    }
+    /* --------About section*/
+    #about .wrapper {
+        flex-direction: column;
+        justify-content: center;
+        gap: 60px;
+    }
+    #about .wrapper .about-img{
+        width: 100%;
+    }
+}
+
+/*Media-query  for 768px*/
+@media screen and (max-width: 768px) {
+    #intro {
+        padding: 0 0 6px;
+        height: auto;
+    }
+    #intro .intro-title {
+        font-size: 28px;
+        line-height: 38px;
+        font-weight: 600;
+        margin-bottom: 18px;
+    }
+    #intro .title-desc {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    #intro .title-desc-desc {
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 400;
+        margin-bottom: 53px;
+    }
+    #intro .intro-car{
+        width: 320px;
+        margin-bottom: 10px;
+    }
+/*    About section    */
+
+}
+
+/*Media-query  for 576px*/
+
+@media screen and (max-width: 576px){
+    .top-header{
+        display: none;
+    }
+    header{
+        height: 56px;
+    }
+    header .header-wrapper{
+        height: 56px;
+    }
+    header .menu-icon{
+        display: block;
+    }
+    header .list {
+        display: none;
+    }
+
+    #intro {
+        padding: 27px 0 32px;
+        height: calc(100vh - 56px);
+        margin-top: 56px;
+    }
+
+    #intro .intro-title {
+        font-size: 24px;
+        line-height: 33px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+    #intro .title-desc {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+    #intro .title-desc-desc {
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 400;
+        margin-bottom: 48px;
+    }
+    #intro .intro-car{
+        width: 280px;
+        margin-bottom: 0;
+    }
+    #intro .cards  {
+        max-width: 500px;
+    }
+    #intro .cards  .card{
+        max-width: 69px;
+        margin: 21px 36px;
+    }
+    #intro .cards  card img{
+        width: 25px;
+    }
+    #intro .cards  card h2{
+        font-size: 25px;
+    }
+    #intro .cards  card p{
+        font-size: 10px;
+    }
+    /*About section*/
+    #about .wrapper{
+        gap: 100px;
+    }
+    #about .wrapper .left-side .extra-card {
+        width:157px;
+        height: 84px;
+        left: 200px;
+        top: 170px;
+    }
+    #about .wrapper .left-side .extra-card .extra-one{
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 20px;
+        margin-bottom: 6px;
+    }
+    #about .wrapper .left-side .extra-card .extra-two{
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 12px;
+    }
+    /* Feature section */
+    #feature {
+        height: 100vh;
+    }
+    #feature .car-on-map .map{
+        width: 200px;
+        margin: 0;
+    }
+    #feature .car-on-map .car-map{
+        min-width: 100px;
+        left: 37%;
+        top: 40%;
+    }
+    #luxury #cards2 {
+        width: 100%;
+        /*flex-direction: column;*/
+        flex-wrap: wrap;
+    }
+    #luxury #cards2 .card {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

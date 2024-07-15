@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EleCar</title>
+    <!----------------Css link--------------->
+    <link rel="stylesheet" href="style.css">
+    <!--  Google Fonts Exo  -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+
+<div class="top-header">
+    <div class="container">
+        <h4 class="top-header-title">EleCar</h4>
+        <p class="top-header-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores corporis est explicabo libero nihil quaerat ratione repellat, tempore vitae voluptatum?</p>
+    </div>
+</div>
+    <!--   Header Section    -->
+    <header>
+
+        <div class="container">
+
+            <div class="header-wrapper">
+                <img class="logo" src="images/Logo.svg">
+
+                <ul id="list" class="list">
+                    <li class="list-item"><a href="#home" class="active">Home</a></li>
+                    <li class="list-item"><a href="#about">About</a></li>
+                    <li class="list-item"><a href="#luxury">Popular</a></li>
+                    <li class="list-item"><a href="#form">Featured</a></li>
+
+                    <select id="select">
+                        <option value="en">English</option>
+                        <option value="ar">Arabic</option>
+                        <option value="uz">Uzbek</option>
+                        <option value="ru">Russian</option>
+                        <option value='kr'>Korean</option>
+                    </select>
+
+                    <select id="modes">
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>
+
+                    </select>
+                </ul>
+
+                <img class="menu-icon" src="images/menu-icon.svg">
+
+                <div class="side-panel none">
+
+                    <img class="close-icon" src="images/menu-close-icon.svg">
+
+                    <ul class="side-panel-list">
+                        <li><a href="#" class="active">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">POPULAR</a></li>
+                        <li><a href="#">FEATURED</a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+    <main>
+        <!--   Intro Section    -->
+        <section id="intro">
+
+            <div class="container">
+
+                <div class="wrapper">
+
+                    <h1 class="intro-title">Choose The Best Car</h1>
+                    <h4 class="title-desc">Porsche Mission E</h4>
+                    <div class="title-desc-desc"><img src="images/electr-icon.svg"><span>Electric car</span></div>
+
+                    <img class="intro-car" src="images/intro-car.svg">
+
+                    <div class="cards">
+                        <div class="card">
+                            <img src="images/home-temperature-icon.svg">
+                            <h2>24C</h2>
+                            <p>TEMPERATURE</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/home-km-icon.svg">
+                            <h2>873</h2>
+                            <p>MILEAGE</p>
+                        </div>
+                        <div class="card">
+                            <img src="images/home-electr-white-icon.svg">
+                            <h2>94%</h2>
+                            <p>BATTERY</p>
+                        </div>
+                    </div>
+
+                    <img class="start-btn" src="images/home-start.svg">
+
+                </div>
+
+            </div>
+        </section>
+
+        <!--   Future Section   -->
+        <section id="about">
+            <div class="container">
+
+                <div class="wrapper">
+                    <div class="left-side">
+
+                        <img class="about-img" src="images/about-img.svg">
+
+                        <div class="extra-card">
+                            <span class="extra-one">2500+</span>
+                            <span class="extra-two">Supercharges placed along popular routes</span>
+                        </div>
+
+                    </div>
+
+                    <div class="right-side">
+                        <h2 class="about-title">Machines With
+                            Future Technology</h2>
+                        <p class="about-desc">See the future with high-performance electric cars produced by renowned brands. They feature futuristic builds and designs with new and innovative platforms that last a long time.</p>
+                        <button class="btn">Know more</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--Loader-->
+        <div class="loader-wrapper">
+            <div class="loader"></div>
+        </div>
+        <!-- Choose section    -->
+        <section id="choose">
+            <div class="container">
+                <h2 class="choose-title">Choose Your Electric Car
+                    Of The Porsche Brand</h2>
+                <div id="cards">
+
+                </div>
+            </div>
+        </section>
+
+        <!--  Feature section ---->
+        <section id="feature">
+
+            <div class="container">
+
+                <h3 class="feature-title">More Features</h3>
+
+                <div class="car-on-map">
+                    <img class="map" src="./images/Map.svg" alt="map">
+                    <img  class="car-map" src="./images/car-onmap.svg" alt="car">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--Luxury section-->
+        <section  id="luxury">
+            <div class="container">
+                <h3 class="luxury-title">Featured Luxury Cars</h3>
+
+                <div class="btn-mini-cards">
+                    <button id="all-btn" class="mini-btn">All</button>
+                    <div class="luxury-mini-cards none">
+                        <span class="mini-logos"><img src="./images/tesla.svg" alt="tesla"></span>
+                        <span class="mini-logos"><img src="./images/audi-logo.svg" alt="audi"></span>
+                        <span class="mini-logos"><img src="./images/porsche-logo.svg" alt="porsche"></span>
+                    </div>
+                </div>
+                <div id="cards2">
+
+                </div>
+
+            </div>
+        </section>
+
+        <!--  Offer section ---->
+        <section id="offer">
+
+            <div class="container">
+
+                <div class="wrapper">
+
+                    <div class="left">
+                        <h2 class="left-title">Do You Want To Receive
+                            Special Offers?</h2>
+                        <p class="left-desc">Be the first to receive all the information about our products and new cars by email by subscribing to our mailing list.</p>
+                        <button class="btn">Subscribe Now</button>
+                    </div>
+
+                    <img src="images/subscribe%20car.svg">
+
+
+                </div>
+            </div>
+        </section>
+
+        <!--  Logos section ---->
+        <section id="logos">
+            <div class="container">
+                <div class="wrapper">
+                    <img src="./images/porsche-logo.svg" alt="porsche">
+                    <img src="./images/audi-logo.svg" alt="audi">
+                    <img src="./images/tesla.svg" alt="tesla">
+                    <img src="./images/bmw.svg" alt="bmw">
+                    <img src="./images/lambor.svg" alt="lambor">
+                    <img src="./images/lexus.svg" alt="lexus">
+                </div>
+            </div>
+        </section>
+
+        <!--Form Section-->
+        <section id="form">
+            <div class="container">
+                <div class="wrapper">
+                    <h2 class="form-title">Buy one!</h2>
+                    <p class="form-desc">Fill out the form below, and we will contact you as soon as possible.</p>
+                    <form action="#" class="form">
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Email">
+                        <label for="input-password">
+                            <input id="input-password" type="password" placeholder="Password">
+                            <span id="show-eye" class="show-eye"><i class='bx bx-show' style='color:#e3dada'></i></span>
+                        </label>
+                        <button class="form-btn">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="wrapper">
+
+                <div class="wrapper-first">
+                    <img src="./images/footerlogo.svg" alt="footerlogo">
+                    <p>We offer the best electric cars of the most recognized brands in the world.</p>
+                </div>
+
+                <div>
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Cars</a></li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Shop</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">Request a quote</a></li>
+                        <li><a href="#">Find a dealer</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="wrapper-last">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li><a href="#"><img src="./images/face.svg" alt="facebook"></a></li>
+                        <li><a href="#"><img src="./images/insta.svg" alt="insta"></a></li>
+                        <li><a href="#"><img src="./images/twit.svg" alt="twit"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> © Bedimcode. All rights reserved</p>
+        </div>
+    </footer>
+    <!----------------Js Link----------------->
+<script src="modes.js"></script>
+<script src="lang.js"></script>
+<script src="db.js"></script>
+<script src="utilities.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
